@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Menu with Grid</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background-color: #333;
+      padding: 10px 0;
+      list-style: none;
+      margin: 0;
+    }
+    .menu li {
+      text-align: center;
+    }
+    .menu li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .menu li a:hover {
+      background-color: #575757;
+    }
+    @media (max-width: 768px) {
+      .menu {
+        grid-template-columns: 1fr; /* Menu chuyển thành 1 cột */
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</body>
+</html>
